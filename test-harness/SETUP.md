@@ -29,14 +29,20 @@ Growth points do not affect setup status.
    build scripts, CI workflows, test folders, fixtures/helpers, and environment-file schemas.
    When inspecting `.env*` files, record variable names and structure only: never reproduce,
    commit, or print secret values.
-2. **Distinguish fact from convention.** Existing code can contain accidental practice. For
+2. **Assess before changing.** Find the remaining setup markers and read the project-specific
+   content already present around them. Preserve completed configuration that is still supported
+   by repository evidence. Change only an applicable unresolved marker, a demonstrably stale fact,
+   or content contradicted by the current project; do not reconfigure a completed area merely
+   because setup was run again.
+3. **Distinguish fact from convention.** Existing code can contain accidental practice. For
    each material conclusion, preserve its provenance as **observed** (with a path), **inferred**
    (and clearly labelled), or **team-confirmed**. Ask the user before turning an uncertain
    inference into a rule.
-3. **Fill and clean.** Replace applicable setup markers with project facts, remove inapplicable
+4. **Fill and clean.** Replace applicable setup markers with project facts, remove inapplicable
    prompts, and remove every neutral example that could be mistaken for a real capability.
-4. **Report.** State the resulting status, what was filled, what remains optional, and what
-   needs confirmation. Do not claim configured status merely because text was inserted.
+5. **Report.** State the resulting status, what was already complete and preserved, what was
+   filled or refreshed, what remains optional, and what needs confirmation. Do not claim
+   configured status merely because text was inserted.
 
 Keep the interview light: one or two questions per area, and group related gaps.
 
@@ -62,7 +68,8 @@ Keep the interview light: one or two questions per area, and group related gaps.
 - No secret value or misleading neutral example remains.
 - Selected known-issue mechanisms document whether tests execute, whether unexpected passes
   are visible, and how the run is counted.
-- The close-out says: **Status** · **Filled** · **Optional/open** · **Needs confirmation**.
+- The close-out says: **Status** · **Already complete** · **Filled/refreshed** ·
+  **Optional/open** · **Needs confirmation**.
 
 Hand the user back to [`TEST-HARNESS.md`](TEST-HARNESS.md). Keep this guide for later
 reconfiguration.
