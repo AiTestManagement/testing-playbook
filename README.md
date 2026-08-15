@@ -16,7 +16,7 @@ tests. It provides universal testing discipline plus concrete guidance for behav
 integration, API, and UI/acceptance tests. Plain Markdown, zero dependencies, compatible
 with any test framework and any AI coding agent—or no agent at all.
 
-Current version: **0.1.0**
+Current version: **0.1.1**
 
 ## What's in it
 
