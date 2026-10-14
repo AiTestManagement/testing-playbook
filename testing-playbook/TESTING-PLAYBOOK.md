@@ -1,9 +1,9 @@
 <!-- PORTABLE TEMPLATE: front door, router, sequence, gate, and maintenance contract. -->
 
-# Test Harness
+# Testing Playbook
 
 The operating guide for authoring, running, and debugging automated tests in this repository.
-It governs testing work under `test-harness/`, not the wider project. This directory is the whole
+It governs testing work under `testing-playbook/`, not the wider project. This directory is the whole
 installed kit: its operating documents do not depend on the source repository's root files.
 
 > **Adopting the kit?** Follow [`SETUP.md`](SETUP.md). If a `SETUP_REQUIRED` marker remains,
@@ -24,7 +24,7 @@ must not be weakened merely to make a run green.
 
 | Document | Use it for |
 |---|---|
-| **TEST-HARNESS** (this file) | Orientation, sequence, gate, glossary, maintenance |
+| **TESTING-PLAYBOOK** (this file) | Orientation, sequence, gate, glossary, maintenance |
 | [`TEST-AUTHORING.md`](TEST-AUTHORING.md) | Test scope, abstraction boundary, decomposition, reuse, blast radius |
 | [`TEST-PATTERN-CATALOGUE.md`](TEST-PATTERN-CATALOGUE.md) | Curated reusable entry points and semantic-fit decisions |
 | [`TEST-DATA-AND-ENVIRONMENTS.md`](TEST-DATA-AND-ENVIRONMENTS.md) | Known data state, environment, identity, and secrets |
@@ -41,62 +41,62 @@ examples; the source repository README mirrors them for people evaluating the ki
 
 If you are unsure which document applies, start here:
 
-> Read `test-harness/TEST-HARNESS.md`, route this request through the appropriate playbook
+> Read `testing-playbook/TESTING-PLAYBOOK.md`, route this request through the appropriate playbook
 > documents, and tell me which guidance you applied: `<describe the test task>`.
 
 ### Review against the Definition of Done
 
-> Read `test-harness/TEST-HARNESS.md`. Review the tests changed on this branch against the core
+> Read `testing-playbook/TESTING-PLAYBOOK.md`. Review the tests changed on this branch against the core
 > Definition of Done and any applicable test-type profile. Report specific gaps with file evidence,
 > and fix them if they are within the scope of this change.
 
 ### Author a test
 
-> Read `test-harness/TEST-AUTHORING.md` and the related project-specific guidance. Add a test for
+> Read `testing-playbook/TEST-AUTHORING.md` and the related project-specific guidance. Add a test for
 > `<behaviour>`. First find its correct test level and home, check for duplicate coverage and
 > semantically matching helpers, then implement and validate it at the appropriate blast radius.
 
 ### Find or create a reusable pattern
 
-> Read `test-harness/TEST-PATTERN-CATALOGUE.md`. Before creating a helper for `<need>`, search the
+> Read `testing-playbook/TEST-PATTERN-CATALOGUE.md`. Before creating a helper for `<need>`, search the
 > catalogue and code for an existing semantic match. Recommend reuse, a local implementation, or a
 > new shared abstraction, with the consumers and blast radius that support your decision.
 
 ### Prepare test data and environments
 
-> Read `test-harness/TEST-DATA-AND-ENVIRONMENTS.md`. Work out how this project should establish the
+> Read `testing-playbook/TEST-DATA-AND-ENVIRONMENTS.md`. Work out how this project should establish the
 > prerequisite state for `<scenario>`, including identity, uniqueness, time, and cleanup. Use
 > repository evidence, identify any missing configuration, and do not expose secret values.
 
 ### Run tests
 
-> Read `test-harness/TEST-EXECUTION.md`. Run the narrowest scope that proves `<change>`, widen
+> Read `testing-playbook/TEST-EXECUTION.md`. Run the narrowest scope that proves `<change>`, widen
 > according to its blast radius, and report the authoritative result as pass, valid failure, or
 > invalid run. Keep skips, expected failures, retries, and non-execution visible.
 
 ### Diagnose a failure
 
-> Read `test-harness/TEST-DIAGNOSTIC-METHODS.md`. Diagnose this failure without changing code first:
+> Read `testing-playbook/TEST-DIAGNOSTIC-METHODS.md`. Diagnose this failure without changing code first:
 > `<failure or run link>`. Preserve the original context, identify the leading ownership hypothesis
 > and strongest alternative, then gather the evidence that distinguishes them.
 
 ### Capture a recurring failure pattern
 
-> Read `test-harness/TEST-FAILURE-AND-FIX-PATTERNS.md`. Determine whether `<failure>` matches an
+> Read `testing-playbook/TEST-FAILURE-AND-FIX-PATTERNS.md`. Determine whether `<failure>` matches an
 > existing pattern. If it is a genuinely new recurring class, confirm the cause and look-alike
 > discriminator, then add a concise evidence-backed entry. Do not record an unconfirmed one-off
 > symptom as a pattern.
 
 ### Handle a known issue
 
-> Read `test-harness/TESTS-WITH-KNOWN-ISSUES.md`. Check whether `<failure>` genuinely matches a
+> Read `testing-playbook/TESTS-WITH-KNOWN-ISSUES.md`. Check whether `<failure>` genuinely matches a
 > current ledger fingerprint. If it is a confirmed live issue, use the project's evidence-preserving
 > mechanism and add or update the ledger entry with owner, evidence, review date, and exact removal
 > condition.
 
 ### Configure it
 
-> Read `test-harness/SETUP.md` and configure the playbook for this repository. Discover facts from
+> Read `testing-playbook/SETUP.md` and configure the playbook for this repository. Discover facts from
 > the repository first. Check its setup markers and existing project-specific content before making
 > changes; preserve areas that are already valid, and configure only applicable gaps or facts that
 > are demonstrably stale. Distinguish observed facts from inferences, ask only about genuine gaps,

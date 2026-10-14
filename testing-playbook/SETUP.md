@@ -71,5 +71,5 @@ Keep the interview light: one or two questions per area, and group related gaps.
 - The close-out says: **Status** · **Already complete** · **Filled/refreshed** ·
   **Optional/open** · **Needs confirmation**.
 
-Hand the user back to [`TEST-HARNESS.md`](TEST-HARNESS.md). Keep this guide for later
+Hand the user back to [`TESTING-PLAYBOOK.md`](TESTING-PLAYBOOK.md). Keep this guide for later
 reconfiguration.
